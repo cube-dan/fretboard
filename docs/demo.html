@@ -6,15 +6,25 @@
     <title>Test Fretboard Page</title>
     <meta name="viewport" content="initial-scale=1">
     <script src="./jquery.js"></script>
+    <script src="./app.js"></script>
     <script src="./src/fretboard.js"></script>
 
     <link rel="stylesheet" type="text/css" href="./src/fretboard.css">
     <link rel="stylesheet" type="text/css" href="./demo.css">
+
 </head>
 
 <body>
 
     <div class="container">
+
+        <label>View: 
+          <select id="nav">
+            <option value="/demo.html">full</option>
+            <option value="/index.html">simple</option>
+          </select>
+        </label>
+
         <div class="my-fretboard-js"></div>
         <!--<div class="my-fretboard-js dark-theme"></div>-->
 

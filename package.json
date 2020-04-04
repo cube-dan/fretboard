@@ -14,7 +14,8 @@
     "test:dev": "mocha --inspect-brk test/index.test.js",
     "coverage": "nyc --reporter=html mocha test/index.test.js",
     "coverage:view": "npx bash script/view_coverage.sh",
-    "cover": "yarn coverage; yarn coverage:view"
+    "cover": "yarn coverage; yarn coverage:view",
+    "demo": "npx http-server -p 8181 docs"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.0",
@@ -22,6 +23,7 @@
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "chai": "^4.2.0",
+    "http-server": "^0.12.1",
     "lodash": "^4.17.15",
     "mocha": "^6.0.1",
     "mocha-logger": "^1.0.6",
