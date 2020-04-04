@@ -1,0 +1,10 @@
+{
+  "name": "fretboard",
+  "version": "0.0.1",
+  "description": "a fork of fmodica/fretboard that (eventually) removes jQuery as a dependency",
+  "main": "index.js",
+  "repository": "git@github.com:cube-dan/fretboard.git",
+  "author": "Dan Bryant <dan@perfectcu.be>",
+  "license": "MIT",
+  "private": false
+}
