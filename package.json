@@ -2,9 +2,29 @@
   "name": "fretboard",
   "version": "0.0.1",
   "description": "a fork of fmodica/fretboard that (eventually) removes jQuery as a dependency",
-  "main": "index.js",
+  "main": "src/fretboard.js",
   "repository": "git@github.com:cube-dan/fretboard.git",
   "author": "Dan Bryant <dan@perfectcu.be>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "scripts": {
+    "build": "npx babel src --out-dir lib",
+    "devel": "npx babel src --watch --out-dir lib",
+    "test": "mocha test/index.test.js",
+    "test:dev": "mocha --inspect-brk test/index.test.js",
+    "coverage": "nyc --reporter=html mocha test/index.test.js",
+    "coverage:view": "npx bash script/view_coverage.sh",
+    "cover": "yarn coverage; yarn coverage:view"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "chai": "^4.2.0",
+    "lodash": "^4.17.15",
+    "mocha": "^6.0.1",
+    "mocha-logger": "^1.0.6",
+    "nyc": "^14.1.1"
+  }
 }
